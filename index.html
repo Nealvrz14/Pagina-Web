@@ -1,0 +1,461 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Postres Faciles </title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div id="nombre">
+    <h1 align="center"> POSTRES FACILES </h1>
+  </div>
+  <div id="total">
+    <div id="carrucel">
+        <div class="container">
+      <div class="mySlides">
+        <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img,w_800/https://www.recetasjudias.com/wp-content/uploads/2017/08/Galletas-chispas-de-chocolate2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://okdiario.com/img/2018/03/12/muffin-de-chocolate.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://www.vibetv.mx/wp-content/uploads/2021/09/receta_volteado_de_pina_con_cerezas-vibetv.jpg" style="width:100%">
+      </div>
+        
+      <div class="mySlides">
+        <img src="https://img.taste.com.au/fuHUwscb/taste/2016/11/white-chocolate-macadamia-blondies-85709-1.jpeg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://cdn0.recetasgratis.net/es/posts/1/4/9/cheesecake_de_frutos_rojos_73941_orig.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://imag.bonviveur.com/flan-napolitano-foto-de-cerca.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img,w_800/https://www.recetasjudias.com/wp-content/uploads/2017/08/Galletas-chispas-de-chocolate2.jpg" style="width:100%;overflow:hidden" onclick="currentSlide(1)" alt="GALLETAS CON CHISPAS DE CHOCOLATE">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://okdiario.com/img/2018/03/12/muffin-de-chocolate.jpg" style="width:100%;overflow:hidden" onclick="currentSlide(2)" alt="MUFFINS DE CHOCOLATE">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://www.vibetv.mx/wp-content/uploads/2021/09/receta_volteado_de_pina_con_cerezas-vibetv.jpg" style="width:100%; overflow:hidden" onclick="currentSlide(3)" alt="VOLTEADO DE PIÑA">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://img.taste.com.au/fuHUwscb/taste/2016/11/white-chocolate-macadamia-blondies-85709-1.jpeg" style="width:100%; overflow:hidden" onclick="currentSlide(4)" alt="BLONDIES">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://cdn0.recetasgratis.net/es/posts/1/4/9/cheesecake_de_frutos_rojos_73941_orig.jpg" style="width:100%; overflow:hidden" onclick="currentSlide(5)" alt="CHEESECAKE">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://imag.bonviveur.com/flan-napolitano-foto-de-cerca.jpg" style="width:100%; overflow:hidden" onclick="currentSlide(6)" alt="FLAN">
+        </div>
+      </div>
+    </div>
+
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+    </div>
+    <div id="recetas">
+      <div id="postre">
+        <div id="nombreR">
+          <h2> Galletas con chispas de chocolate </h2>
+        </div>
+        <div id="contenido">
+          <div id="tres">
+            <div id="foto">
+              <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img,w_800/https://www.recetasjudias.com/wp-content/uploads/2017/08/Galletas-chispas-de-chocolate2.jpg" width="500">
+            </div>
+            <div id="descripcion">    
+              <p> ¿A quien no le gustan unas galletas recien horneadas?, para mi es un postre infalibre para esos dias lluviosos, unas galletas recien horneadas y una buena taza de cafe, hacen el que el dia se vuelva especial. </p>
+            </div>
+            <div id="ingredientes">    
+              <h3> Ingredientes </h3>
+              <p> 14 galletas </p>
+              <li> 120g Mantequilla (Temperatura ambiente) </li>
+              <li> 120g Azucar </li>
+              <li> 1 Huevo </li>
+              <li> 1cdta Extracto de vainilla </li>
+              <li> 170g Harina</li>
+              <li> 1/2cdta Bicarbonato de Sodio </li>
+              <li> 1/2cdta Sal </li>
+              <li> 100g Chips de chocolate </li>
+              <li> 100g Nuez troceada(opcional) </li>
+            </div>
+          </div>
+          <div id="dos">
+            <div id="procedimiento">
+              <h3> Procedimiento </h3>
+              <ol>
+              <li> Acremar la mantequilla junto con el azucar, por 5 minutos. </li>
+              <li> Agregar el huevo poco a poco hasta integrar por completo, y agregar el extracto de vainilla. </li>
+              <li> Agregar el harina, el bicarbonato y la sal por medio de un tamizador. </li>
+              <li> Integrar el tiempo necesario para no sobrebatir la masa y evitar que las galletas se apelmasen. </li>
+              <li> Por ultimo integrar las chispas de chocolate y la nuez. </li>
+              <li> Dejar la masa en el refrigerador, por al menos 1 hora. </li>  
+              <li> Una vez pasado ese tiempo, hacer bolitas de masa de aproximadamente 45g cada una. </li>   
+              <li> Colocar las bolitas en una bandeja para horno y llevarlas a hornear en un horno precalentado a 180° por aprox. 10-12 minutos. </li>   
+              <li> Una vez salidas del horno, dejarlas reposar en la bandeja por 5 minutos, y despues trasladarlas a una rejilla hasta que se enfrien por completo. </li>    
+              </ol>
+            </div>
+            <div id="tip">
+              <h3> Consejos y tecticas </h3>
+              <li> En vez de chispas de chocolate puedes utilizar cualquier topping de tu preferencia. </li>
+              <li> Si quieres colorear la masa hazlo con colorantes en gel y despues de agregar los polvos. </li>  
+              <li> No batas en exeso la mezcla para evitar apelmasamiento. </li>
+              <li> Es necesario refrigerar la masa, ademas de que facilita hacer las bolitas, hace que conserven su forma en el horneado. </li>
+              <li> No te recomiendo que hagas las bolitas mas pequeñas, porque la masa se puede expandir mucho y hara que queden muy delgadas las galletas. </li>
+              <li> Puedes abrir el horno una vez pasados 3/4 partes del tiempo de la receta. </li>
+              <li> Puedes disfrutarlas tibias </li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="postre">
+        <div id="nombreR">
+          <h2> Muffins de Chocolate </h2>
+        </div>
+        <div id="contenido">
+          <div id="tres">
+            <div id="foto">
+              <img src="https://okdiario.com/img/2018/03/12/muffin-de-chocolate.jpg" width="500">
+            </div>
+            <div id="descripcion">
+              <p> Sin duda uno de mis favoritos, con su sabor intenso a chocolate y esas chispas de chocolate en su interior hacen que le den un toque muy especial a este postre. </p>
+            </div>
+            <div id="ingredientes">
+              <h3> Ingredientes </h3>
+              <p> 10-12 muffins </p>
+              <li> 2 Huevos </li>
+              <li> 240g Azucar </li>
+              <li> 100ml Aceite </li>
+              <li> 220g Yogurt </li>
+              <li> 1cdta Extracto de vainilla </li>
+              <li> 180g Harina </li>
+              <li> 60g Cacao en polvo </li>
+              <li> 1 y 1/2cdtas Polvo para Hornear </li>
+              <li> 1/2cdta Bicarbonato de sodio </li>
+              <li> Pizca de Sal </li>
+              <li> 30ml de Agua caliente </li>
+              <li> 120g Chips de chocolate </li>
+              <li> 90g Nuez troceada(opcional) </li>
+            </div>
+          </div>
+          <div id="dos">
+            <div id="procedimiento">
+              <h3> Procedimiento </h3>
+              <ol>
+              <li> Batir el huevo junto con el azucar por 5 minutos, para que espume. </li>
+              <li> Una vez pasados ese tiempo, añadir el aceite poco a poco, en forma de hilo. </li>
+              <li> Ya que este integrado, añadir el yogurt y el extracto de vainilla. </li>
+              <li> Con un cernidor añadir los polvos (harina, cacao, polvo para hornear, bicarbonato de sodio y sal). </li>
+              <li> Integrar muy suavemente y solo el tiempo justo para evitar apelmasamiento. </li>
+              <li> Agregar el agua caliente, e integrarlo. </li>  
+              <li> Agregar las chispas de chocolate y la nueces. </li>   
+              <li> Colocar los capacillos en una bandeja para cupcakes, y con una cuchara para helados repartir la mezcla hasta 3/4 su capacidad. </li>   
+              <li> Colocar en un horno precalentado a 180° por aprox. 20-25 minutos (este tiempo depende del tamaño de capasillos). </li>
+              <li> Retirar del horno y dejar reposar en la misma bandeja por 5 minutos, transcurrido ese tiempo sacar de la bandeja y colocarlos sobre una rejilla hasta que enfrien por completo. </li>   
+              </ol>
+            </div>
+            <div id="tip">
+              <h3> Consejos y tecticas </h3>
+              <li> El cacao en polvo tambien es conocido como cocoa, pero debes de verificar que no contenga azucar. </li>
+              <li> Siempre llena solamente 3/4 partes de la capacidad de los capacillos. </li>  
+              <li> No batas en exeso la mezcla para evitar apelmasamiento. </li>
+              <li> Debes hornear el tiempo justo para evitar que los muffins se seque. </li>
+              <li> Para saber que el bizcocho ya esta listo puedes picanchalo en el centro con un palillo y si este sale limpio es que esta perfectamente cocido. </li>
+              <li> No abras y cierres el horno todo el tiempo, ya que el calor del horno se escapara y provoca que los muffins se baje y apelmace. </li>
+              <li> Puedes abrir el horno una vez pasados 3/4 partes del tiempo de la receta. </li>
+            </div>
+          </div>
+        </div> 
+      </div>  
+
+      <div id="postre">
+        <div id="nombreR">
+          <h2> Volteado de Piña </h2>          
+        </div>
+        <div id="contenido">
+          <div id="tres">
+            <div id="foto">
+              <img src="https://www.vibetv.mx/wp-content/uploads/2021/09/receta_volteado_de_pina_con_cerezas-vibetv.jpg" width="500">
+            </div>
+            <div id="descripcion">
+              <p> Este es un postre perfecto para los amantes de la piña, es un bizcocho muy tierno y jugoso, es indicado cuando necesitas realizar un postre rico y estetico pero tienes poco tiempo. </p>
+            </div>
+            <div id="ingredientes">
+              <h3> Ingredientes </h3> 
+              <p> 10-12 raciones/molde 23cm </p>
+              <p> BASE </p>
+              <li> 60g Mantequilla </li>
+              <li> 150g Azucar Mascabado </li>
+              <li> 5 Rodajas de piña </li>
+              <li> 9 Cerezas en almibar </li>
+              <li> 50g Coco deshidratado (Opcional) </li>
+              <p> BIZCOCHO </p>            
+              <li> 120g Mantequilla </li>
+              <li> 180g Azucar </li>
+              <li> 2 Huevos </li>
+              <li> 200g Harina </li>
+              <li> 60g Cacao en polvo </li>
+              <li> 2cdtas Polvo para Hornear </li>
+              <li> Pizca de Sal </li>
+              <li> 30ml Leche </li>
+              <li> 60ml Jugo de Piña </li>
+              <li> 1cdta Extracto de Vainilla </li>
+            </div>
+          </div>
+          <div id="dos">
+            <div id="procedimiento">
+              <h3> Procedimiento </h3>
+              <ol>
+              <p> BASE </p>
+              <li> Derretir la mantequilla a fuego lento para evitar que se queme. </li>
+              <li> Repartir el azucar y el coco por toda la base del molde. </li>
+              <li> En un molde de 23cm, preferiblemente no desmontable, colocar la mantequilla. </li>
+              <li> Colocar las rodajas de piña y las cerezas en almibar, como se muestran en la imagen. </li>
+              <p> BIZCOCHO </p>
+              <li> Acremar la mantequilla junto con el azucar, por 5 minutos. </li>
+              <li> Pasado ese tiempo agregar los huevos poco a poco hasta integrar. </li>
+              <li> Con un colador agregar el harina, el povo para hornear y la sal. </li>
+              <li> Integrar muy suavemente y solo el tiempo justo para evitar apelmasamiento. </li>
+              <li> Por ultimo agregar la leche, el jugo de piña y la vainilla. </li>  
+              <li> Una vez la mezcla esta homogenea, colocarla con mucho cuidado sobre el molde, para evitar desacomodar las rodajas de piña. </li>   
+              <li> Hornear en un horno precalentado a 180° por aprox. 45 minutos. </li>   
+              <li> Retirar del horno y desmoldar en caliente (tener mucho cuidado porque esta a altas temperaturas). </li>
+              <li> Dejar enfriar y disfrutar </li>    
+              </ol>
+            </div>
+            <div id="tip">
+              <h3> Consejos y tecticas </h3>
+              <li> En este caso es necesario desmoldar en caliente para evitar que la base se adiera al molde y arruine la decoracion. </li>
+              <li> Ten en cuenta que necesitas engrasar las paredes del molde, en caso de haberlo olvidado, una vez horneado repasar por las orillas del molde con un cuchillo delgado para ayudar a que se despegue. </li>  
+              <li> No batas en exeso la mezcla para evitar apelmasamiento. </li>
+              <li> Debes hornear el tiempo justo para evitar que el bizcocho se seque. </li>
+              <li> Para saber que el bizcocho ya esta listo puedes picanchalo en el centro con un palillo y si este sale limpio es que esta perfectamente cocido. </li>
+              <li> No abras y cierres el horno todo el tiempo, ya que el calor del horno se escapara y provoca que el bizcocho se baje y apelmace. </li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="postre">
+        <div id="nombreR">
+          <h2> Blondies </h2>
+        </div>
+        <div id="contenido">
+          <div id="tres">
+            <div id="foto">
+              <img src="https://img.taste.com.au/fuHUwscb/taste/2016/11/white-chocolate-macadamia-blondies-85709-1.jpeg" width="500">
+            </div>
+            <div id="descripcion">
+              <p> Los blondies tambien son conocidos como brownies rubios, a diferencia de los brownies que tienen un sabor intenso a chocolate los blondies tienen un sabor acaramelado. </p>
+            </div>
+            <div id="ingredientes">
+              <h3> Ingredientes </h3>
+              <p> Molde cuadrado 25x25cm </p>
+              <li> 220g Mantequilla </li>
+              <li> 200g Azucar Mascabado </li>
+              <li> 100g Azucar Blanco </li>
+              <li> 3 Huevos </li>
+              <li> 2cdta Extracto de vainilla </li>
+              <li> 300g Harina </li>
+              <li> 60g Cacao en polvo </li>
+              <li> 1cdta Polvo para Hornear </li>
+              <li> Pizca de Sal </li>
+              <li> 120g Chispas de chocolate blanco </li>
+              <li> 120g Nuez troceada(opcional) </li>
+            </div>
+          </div>
+          <div id="dos">
+            <div id="procedimiento">
+              <h3> Procedimiento </h3>
+              <ol>
+              <li> Derretir la mantequilla junto con el azucar mascabado y el azucar blanco. </li>
+              <li> Una vez derretida la mantequilla agregar a un bowl y dejar que se enfrie un poco. </li>
+              <li> Añadir los huevos poco a poco y mezclar con unas barillas de mano, añadir la vainilla. </li>
+              <li> Con un tamizador añadir los polvos (harina, polvo para hornear y sal). </li>
+              <li> Integrar muy suavemente y solo el tiempo justo para evitar apelmasamiento. </li>
+              <li> Agregar las chispas de chocolate y las nueces. </li>  
+              <li> Vertir la mezcla en un molde con papel encerado. </li> 
+              <li> Llevar a un horno precalentado a 180° por aprox. 30 minutos </li>   
+              <li> Retirar del horno y dejar reposar en el molde por 10 minutos, transcurrido ese tiempo desmoladrlo y colocarlo sobre una rejilla hasta que enfrie por completo. </li>   
+              <li> Cortar en cuadrados y disfrutar. </li>   
+              </ol>
+            </div>
+            <div id="tip">
+              <h3> Consejos y tecticas </h3>
+              <li> Al finalizar la mezcla te daras cuenta que tiene una consistencia muy densa, por eso es necesario que la distribuyas muy bien por todo el molde para que el horneado quede prolijo. </li>
+              <li> Puedes decorar los blondies una vez que esten frios, puede ser con chocolate derretido y tus toppings de preferencia . </li>  
+              <li> Corta la mantequilla en cubos pequeños, esto ayudara a que se derrita mas rapido. </li>
+              <li> Para comprobar que tu blondie esta cocinado pinchalo en el centro con un palillo, si este sale limpio significa que ya esta. </li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="postre">
+        <div id="nombreR">
+          <h2> Cheesecake </h2>
+        </div>
+        <div id="contenido">
+          <div id="tres">
+            <div id="foto">
+              <img src="https://cdn0.recetasgratis.net/es/posts/1/4/9/cheesecake_de_frutos_rojos_73941_orig.jpg" width="500">
+            </div>
+            <div id="descripcion">
+              <p> Un clasico que nunca pasa de moda en la reposteria. Es un postre cremoso, que junto con el crujiente de la base y la acidez de la fruta, llegan al equilibrio perfecto para ser un postre espectacular. </p>
+            </div>
+            <div id="ingredientes">
+              <h3> Ingredientes </h3>
+              <p> Molde de 18cm </p>
+              <p> BASE </p>
+              <li> 180g Galletas de vainilla </li>
+              <li> 100g Mantequilla derretida </li>
+              <li> 50g Nueces, almendras, avellanas trituradas (opcional) </li>
+              <p> CHEESECAKE </p>
+              <li> 500g Queso crema </li>
+              <li> 120g Azucar </li>
+              <li> 1cdta Extracto de vainilla </li>
+              <li> 160ml Crema para batir </li>
+              <li> 20ml Jugo de limon </li>
+              <li> Ralladura de limon al gusto (opcional) </li>
+              <li> 1cda Fecula de maiz </li>
+              <li> 3 Huevos </li>
+              <p> DECORACION </p>
+              <li> Mermelada de fresa o puede ser del sabor de tu preferencia (opcional) </li>
+              <li> Frutos rojos o cualquier fruto de tu preferencia (opcional) </li>
+            </div>
+          </div>
+          <div id="dos">
+            <div id="procedimiento">   
+              <h3> Procedimiento </h3>
+              <p> BASE </p>
+              <ol>
+              <li> En un procesador de alimentos triturar las galletas hasta que pulvericen. </li>
+              <li> Una vez triturarlas colocarlas en un bowl, junto con las nueces y la mantequilla derretida. </li>
+              <li> Mezclar muy bien hasta formar una masa arenosa. </li>
+              <li> Colocar la masa en la base y las paredes de un molde, y llevar a hornear en un horno precalentado a 180° por aprox. 15 minutos. </li>
+              <li> Pasado ese tiempo retirar del horno y dejar enfriar. </li>
+              <p> CHEESECAKE </p>
+              <li> Añadir el jugo de limon en la crema para batir, mezclar un poco y dejar reposar por 10 minutos. </li>
+              <li> En un bowl colocar el queso crema junto con el azucar y batir a velocidad baja por 2 minutos. </li>
+              <li> Pasado ese tiempo añadir la crema para batir que preparamos en el paso 1. </li>  
+              <li> Una vez integrada añadir la ralladura de limon y la vainilla. </li> 
+              <li> Con un colador tamizar la fecula de maiz y una vez integrado añadir los huevos poco a poco, batir solo el tiempo justo para evitar agregar aire a la mezcla y que genere gritas en el horneado. </li>   
+              <li> Agregar la mezcla sobre el molde con la base de galletas, y hacer pequeños golpes en la mesa de trabajo para que las burbujas de aire salgan. </li>   
+              <li> Llevar a un horno precalentado a 160° por aprox. 50 minutos. </li> 
+              <li> Pasado ese tiempo apagar el horno y dejar dentro el cheesecake por otros 30 minutos. </li> 
+              <li> Transcurridos los 30 minutos abrir un poco la puerta del horno y dejar ahi por otros 15 minutos mas. </li>   
+              <li> Hecho todo eso sacar del horno y dejar a temperatura ambiente hasta que enfrie. </li> 
+              <li> Una vez frio llevar al refrigerador por un minimo de 8 horas. </li> 
+              <li> Desmoldar con mucho cuidado el cheesecake, y decorar con una fina capa de mermelada en la superficie y colocar los frutos rojos. </li> 
+              </ol>
+            </div>
+            <div id="tip">
+              <h3> Consejos y tecticas </h3>
+              <li> Para evitar que se agriete a la hora del horneado no agreges mucho aire a la mezcla, solo integra hasta que este homogenea y sin grumos. </li>  
+              <li> Puedes no hornear la base de galletas pero esto hara que quede con una consistencia diferente y no tan crujiente. </li>
+              <li> Sigue al pie de la receta el como debes de sacar tu cheesecake del horno, nunca lo saques del horno inmediatamente. </li>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <div id="postre">
+          <div id="nombreR">
+            <h2> Flan </h2>
+        </div>
+        <div id="contenido">
+          <div id="tres">
+            <div id="foto">
+              <img src="https://imag.bonviveur.com/flan-napolitano-foto-de-cerca.jpg" width="500">
+            </div>
+            <div id="descripcion">
+              <p> Este es un postre tan simple pero por su sabor y cremocidad enamora al paladar. </p>
+            </div>
+            <div id="ingredientes">
+              <h3> Ingredientes </h3>
+              <p> Molde de 1.8L de capacidad </p>
+              <p> CARAMELO </p>
+              <li> 240g Azucar </li>
+              <li> 80ml Agua </li>
+              <li> 1/2cda Jugo de limon </li>
+              <p> FLAN </p>
+              <li> 7 Huevos </li>
+              <li> 400g Leche condensada </li>
+              <li> 400ml Leche evaporada </li>
+              <li> 100ml Media crema </li>
+              <li> 100ml Leche </li>
+              <li> 1cdta Extracto de vainilla </li>
+            </div>
+          </div>
+        <div id="dos">
+          <div id="procedimiento">
+            <h3> Procedimiento </h3>
+            <p> CARAMELO </p>
+            <ol>
+            <li> En un cazo poner el agua, el jugo de limon y el azucar, remover para que el azucar se empape por completo, dejar a fuego medio durante unos 5 minutos, es importante que no remuevas para evitar que se cristalice. </li>
+            <li> Cuando tiene un color dorado, esparcirlo por todo el molde para el flan. </li>
+            <p> FLAN </p>
+            <li> En una licuadora colocar todos los ingredientes y licuarlos por unos minutos. </li>
+            <li> Vertir la mezcla sobre el molde, y taparlo con papel aluminio. </li>
+            <li> Hornearlo a baño maria por aproximadamente 90 minutos. </li>
+            <li> Una vez pasado el tiempo de horneado, sacar de horno y dejarlo reposar hasta que enfrie. </li>  
+            <li> Una vez frio, refrigerar por al menos 8 horas. </li> 
+            <li> Una vez transcurrido ese tiempo ya puedes desmoldar y disfrutar. </li>    
+            </ol>
+          </div>
+          <div id="tip">
+            <h3> Consejos y tecticas </h3>
+            <li> El baño maria consiste en colocar el molde en un cazo que contenga agua hirviendo, el molde no debe de tocar el agua y este cazo debe de estar tapado, esto para que el calor no se escape. </li>
+            <li> Puedes sustituir la leche evaporada y la media crema por leche, pero ten en cuenta que no quedara igual de cremoso. </li>  
+            <li> En vez de preparar el caramelo en casa puedes comprarlo ya hecho, esto te hara mas rapido el proceso. </li>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</body>
+</html>
